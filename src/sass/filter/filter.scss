@@ -1,0 +1,65 @@
+/* Stile generale per la sezione filtri */
+.filter-section {
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile per le label dei filtri */
+.filter-section label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+/* Stile per input e select */
+.filter-section input[type="text"],
+.filter-section input[type="date"],
+.filter-section input[type="number"],
+.filter-section select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.filter-section input[type="text"]:focus,
+.filter-section input[type="date"]:focus,
+.filter-section input[type="number"]:focus,
+.filter-section select:focus {
+  border-color: #4a90e2;
+}
+
+/* Stile specifico per i filtri data e importo */
+.filter-section .filter-date,
+.filter-section .filter-amount {
+  display: flex;
+  gap: 16px;
+}
+
+/* Stile per i campi di input specifici nella sezione importo e data */
+.filter-section .filter-date input,
+.filter-section .filter-amount input {
+  flex: 1;
+}
+
+/* Stile per il pulsante di reset */
+.button-toggle-filters {
+  padding: 8px 12px;
+  color: white;
+  background-color: #1f2869;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button-toggle-filters:hover {
+  background-color: #8390f8;
+}

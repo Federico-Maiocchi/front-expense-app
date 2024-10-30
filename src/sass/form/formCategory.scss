@@ -1,0 +1,89 @@
+.card-form-category {
+    border: 1px solid #ccc; /* Colore del bordo */
+    border-radius: 8px; /* Angoli arrotondati */
+    padding: 20px; /* Spaziatura interna */
+    background-color: #f9f9f9; /* Colore di sfondo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra per dare profondità */
+    max-width: 400px; /* Larghezza massima */
+    margin: 20px auto; /* Centra il modulo orizzontalmente */
+    
+    h1 {
+      text-align: center; /* Allinea il titolo al centro */
+      margin-bottom: 20px; /* Margine inferiore */
+      font-size: 1.5rem; /* Dimensione del font */
+      color: #333; /* Colore del testo */
+    }
+  
+    .form-group {
+      margin-bottom: 15px; /* Spazio tra i gruppi di input */
+    }
+  
+    label {
+      font-weight: bold; /* Rende le etichette più spesse */
+      margin-bottom: 5px; /* Spazio sotto l'etichetta */
+      display: block; /* Rende l'etichetta un blocco */
+      color: #555; /* Colore del testo dell'etichetta */
+    }
+  
+    input,
+    select {
+      border: 1px solid #ccc; /* Colore del bordo degli input */
+      border-radius: 4px; /* Angoli arrotondati */
+      padding: 10px; /* Spaziatura interna */
+      width: 100%; /* Larghezza al 100% */
+      box-sizing: border-box; /* Include padding e bordo nel calcolo della larghezza */
+      transition: border-color 0.3s; /* Transizione per l'effetto hover */
+  
+      &:focus {
+        border-color: #007bff; /* Colore del bordo quando l'input è attivo */
+        outline: none; /* Rimuove il contorno di default */
+      }
+    }
+  
+    button {
+      background-color: #007bff; /* Colore di sfondo del pulsante */
+      color: white; /* Colore del testo del pulsante */
+      border: none; /* Rimuove il bordo */
+      border-radius: 4px; /* Angoli arrotondati */
+      padding: 10px 15px; /* Spaziatura interna del pulsante */
+      cursor: pointer; /* Cambia il cursore in puntatore */
+      width: 100%; /* Larghezza al 100% */
+      transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+  
+      &:hover {
+        background-color: #0056b3; /* Colore del pulsante al passaggio del mouse */
+      }
+    }
+
+    button.red{
+      background-color: rgb(200, 31, 31); /* Colore di sfondo del pulsante */
+      color: white; /* Colore del testo del pulsante */
+      border: none; /* Rimuove il bordo */
+      border-radius: 4px; /* Angoli arrotondati */
+      padding: 10px 15px; /* Spaziatura interna del pulsante */
+      cursor: pointer; /* Cambia il cursore in puntatore */
+      width: 100%; /* Larghezza al 100% */
+      transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+
+      &:hover {
+        background-color: rgb(221, 83, 83); /* Colore del pulsante al passaggio del mouse */
+      }
+    }
+
+    
+  }
+
+  .icon-right {
+      border: 1px solid black;
+      background-color:#0056b3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon-create {
+        font-size: 150px;
+        color: white
+      }
+  }
+
+  

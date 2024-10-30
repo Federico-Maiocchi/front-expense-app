@@ -1,0 +1,219 @@
+@import "../sass/variables/variables";
+
+// Mixin per i bordi arrotondati
+@mixin rounded {
+  border-radius: 5px;
+}
+
+// Sidebar
+aside {
+  padding: 0 10px;
+  width: 250px; // Larghezza della sidebar
+  background-color: $background-template; // Colore di sfondo
+  color: white; // Colore del testo
+  transition: width 0.3s ease, transform 0.3s ease; // Transizione fluida
+
+  &.reduced {
+    width: 60px; // Larghezza della sidebar ridotta
+    // transform: translateX(-190px); // Sposta la sidebar a sinistra
+  }
+
+  // Logo
+  .logo {
+    font-size: 18px; // Dimensione del font
+    font-weight: bold; // Grassetto
+    padding: 15px 0; // Padding verticale
+    height: 60px; // Altezza del logo
+    border-bottom: 2px solid black; // Bordo sotto il logo
+    display: flex; // Flexbox per allineare l'icona e il testo
+    align-items: center; // Centro verticale
+
+    .photo-logo {
+      height: 40px; // Altezza dell'immagine del logo
+      width: 40px; // Larghezza dell'immagine del logo
+      //background-color: black; // Colore di sfondo del logo
+      @include rounded; // Utilizza il mixin per bordi arrotondati
+      margin-right: 10px; // Spazio tra logo e testo
+    }
+  }
+
+  // Account
+  .account {
+    font-size: 18px; // Dimensione del font
+    font-weight: 800; // Grassetto
+    padding: 15px 0; // Padding verticale
+    margin-bottom: 50px; // Margine inferiore
+    border-bottom: 2px solid black; // Bordo sotto l'account
+    display: flex; // Flexbox per allineare l'icona e il testo
+    align-items: center; // Centro verticale
+
+    .photo-avatar {
+      height: 40px; // Altezza dell'immagine dell'avatar
+      width: 40px; // Larghezza dell'immagine dell'avatar
+      //background-color: black; // Colore di sfondo dell'avatar
+      @include rounded; // Utilizza il mixin per bordi arrotondati
+      margin-right: 10px; // Spazio tra avatar e nome
+    }
+  }
+
+  // Lista
+  .list-primary {
+    font-size: 18px; // Dimensione del font
+    font-weight: 800; // Grassetto
+    margin-top: 10px; // Margine superiore
+
+    // Item lista principale
+    .list-item {
+      padding: 10px 15px; // Padding uniforme
+      margin-bottom: 10px; // spaziature li
+      background-color: $background-primary-color; // Colore di sfondo
+      @include rounded; // Utilizza il mixin per bordi arrotondati
+      cursor: pointer; // Cambia cursore per interazione
+      transition: background-color 0.3s, color 0.3s; // Transizione per hover
+
+      &:hover {
+        background-color: #8390f8; // Colore di sfondo al passaggio del mouse
+        color: #2a368e; // Colore del testo al passaggio del mouse
+      }
+
+      /* Quando l'elemento è attivo (sotto-lista aperta), rimuovi lo stile hover */
+      &.active {
+        background-color: $background-primary-color; // Colore normale
+        color: white; // Colore del testo attivo
+
+        &:hover {
+          background-color: $background-primary-color; // Non cambia quando è attivo
+          color: white; // Colore del testo attivo
+        }
+      }
+    }
+
+    // Item sotto lista
+    .list-second-item {
+      background-color: $background-primary-color; // Colore di sfondo
+      font-size: 16px; // Dimensione del font
+      font-weight: 600; // Grassetto
+      padding: 5px; // Padding
+      margin-bottom: 2px; // Margine inferiore
+      @include rounded; // Utilizza il mixin per bordi arrotondati
+
+      &:hover {
+        background-color: $secondary-color; // Colore di sfondo al passaggio del mouse
+        color: $primary-color; // Colore del testo al passaggio del mouse
+      }
+    }
+  }
+}
+
+// Media Queries per la responsività
+@media (max-width: 768px) {
+  aside {
+    width: 200px; // Riduci la larghezza della sidebar sui dispositivi più piccoli
+  }
+}
+
+
+
+// @import "../sass/variables/variables";
+
+// // Sidebar
+// aside {
+//   padding: 0 10px;
+//   width: 250px; // Larghezza della sidebar
+//   background-color: $background-template; // Colore di sfondo
+//   color: white; // Colore del testo
+//   transition: width 0.3s ease, transform 0.3s ease; // Transizione fluida
+
+//   &.reduced {
+//     width: 60px; // Larghezza della sidebar ridotta
+//     // transform: translateX(-190px); // Sposta la sidebar a sinistra
+//   }
+
+//   // Logo
+//   .logo {
+//     font-size: 22px; // Dimensione del font
+//     font-weight: bold; // Grassetto
+//     padding: 15px 0; // Padding verticale
+//     height: 60px; // Altezza del logo
+//     border-bottom: 2px solid black; // Bordo sotto il logo
+//     display: flex; // Flexbox per allineare l'icona e il testo
+//     align-items: center; // Centro verticale
+
+//     .photo-logo {
+//       height: 40px; // Altezza dell'immagine del logo
+//       width: 40px; // Larghezza dell'immagine del logo
+//       background-color: black; // Colore di sfondo del logo
+//       border-radius: 50%; // Angoli arrotondati
+//       margin-right: 10px; // Spazio tra logo e testo
+//     }
+//   }
+
+//   // Account
+//   .account {
+//     font-size: 18px; // Dimensione del font
+//     font-weight: 800; // Grassetto
+//     padding: 15px 0; // Padding verticale
+//     margin-bottom: 50px; // Margine inferiore
+//     border-bottom: 2px solid black; // Bordo sotto l'account
+//     display: flex; // Flexbox per allineare l'icona e il testo
+//     align-items: center; // Centro verticale
+
+//     .photo-avatar {
+//       height: 40px; // Altezza dell'immagine dell'avatar
+//       width: 40px; // Larghezza dell'immagine dell'avatar
+//       background-color: black; // Colore di sfondo dell'avatar
+//       border-radius: 50%; // Angoli arrotondati
+//       margin-right: 10px; // Spazio tra avatar e nome
+//     }
+//   }
+
+//   // Lista
+//   .list-primary {
+//     font-size: 18px; // Dimensione del font
+//     font-weight: 800; // Grassetto
+//     margin-top: 10px; // Margine superiore
+
+//     // Item lista principale
+//     .list-item {
+//       padding: 10px 15px; // Padding uniforme
+//       background-color: $background-primary-color; // Colore di sfondo
+//       border-radius: 5px; // Angoli arrotondati
+//       cursor: pointer; // Cambia cursore per interazione
+
+//       &:hover {
+//         background-color: #8390f8; // Colore di sfondo al passaggio del mouse
+//         color: #2a368e; // Colore del testo al passaggio del mouse
+//       }
+
+//       /* Quando l'elemento è attivo (sotto-lista aperta), rimuovi lo stile hover */
+//       &.active {
+//         background-color: $background-primary-color; // Colore normale
+//         color: white; // Colore del testo attivo
+
+//         &:hover {
+//           background-color: $background-primary-color; // Non cambia quando è attivo
+//           color: white; // Colore del testo attivo
+//         }
+//       }
+//     }
+
+//     // Item sotto lista
+//     .list-second-item {
+//       background-color: $background-primary-color; // Colore di sfondo
+//       font-size: 16px; // Dimensione del font
+//       font-weight: 600; // Grassetto
+//       padding: 5px; // Padding
+//       margin-bottom: 2px; // Margine inferiore
+//       border-radius: 5px; // Angoli arrotondati
+
+//       &:hover {
+//         background-color: $secondary-color; // Colore di sfondo al passaggio del mouse
+//         color: $primary-color; // Colore del testo al passaggio del mouse
+//       }
+//     }
+//   }
+// }
+
+
+
+

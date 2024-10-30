@@ -1,0 +1,159 @@
+.cardTransaction {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Ombra per profondità
+  padding: 16px;
+  border-radius: 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Transizione per zoom e ombra
+
+  // Effetto di zoom on hover
+  &:hover {
+    transform: scale(1.05); // Scala la card del 5% quando è in hover
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); // Ombra più intensa
+  }
+
+  .cardTransaction-header {
+    padding: 10px; // Maggiore padding per il header
+    border-radius: 22px 22px 0px 0px;
+    border: 1px solid transparent; // Linea trasparente per evitare bordi evidenti
+    text-align: center; // Centra il testo
+
+    &.expense {
+      background-color: #ff4d4d; // Rosso tenue
+      color: white;
+    }
+
+    &.income {
+      background-color: #4caf50; // Verde tenue
+      color: white;
+    }
+
+    .cardTransaction-type {
+      font-size: large;
+      font-weight: bold;
+      text-transform: uppercase; // Testo in maiuscolo
+    }
+  }
+
+  .cardTransaction-body {
+    padding: 10px;
+    background-color: white; // Bianco per contrasto
+    border: 1px solid #e0e0e0; // Bordo grigio chiaro
+    border-radius: 0 0 22px 22px; // Uniformità nella border-radius
+
+    .cardTransaction-title {
+      font-size: 22px; // Dimensione del font
+      font-weight: bold;
+      margin-bottom: 5px; // Spazio sotto il titolo
+      color: #333; // Colore scuro per il testo
+    }
+
+    .cardTransaction-icon {
+      font-size: 30px;
+      margin-right: 8px; // Spazio a destra
+      vertical-align: middle; // Allinea l'icona con il testo
+    }
+
+    .cardTransaction-date {
+      font-size: 18px; // Dimensione del font per la data
+      color: #666; // Colore grigio per la data
+      margin-top: 5px; // Margine superiore per separazione
+    }
+
+    .cardTransaction-amount {
+      font-size: 20px; // Dimensione del font per l'importo
+      font-weight: bold; // Grassetto per l'importo
+      color: #000; // Colore nero per l'importo
+      margin-top: 5px; // Margine superiore per separazione
+    }
+
+    .cardTransaction-action {
+      margin-top: 10px; // Spazio sopra le azioni
+      display: flex;
+      justify-content: space-between; // Spazio tra i link di azione
+      font-size: 14px; // Dimensione del font per le azioni
+
+      a {
+        color: #007bff; // Colore blu per i link
+        text-decoration: none; // Rimuove la sottolineatura
+        transition: color 0.3s; // Transizione per il colore
+
+        &:hover {
+          color: #0056b3; // Blu scuro al passaggio del mouse
+        }
+      }
+
+      .text-red-600 {
+        color: #d9534f; // Rosso per il testo di eliminazione
+        cursor: pointer; // Cambia il cursore per indicare che è cliccabile
+        transition: color 0.3s;
+
+        &:hover {
+          color: #c9302c; // Colore rosso scuro al passaggio del mouse
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// .cardTransaction {
+//     // height: 100%;
+//     // border: 1px solid;
+//     // border-radius: 22px;
+  
+//     padding: 16px; /* Aggiungi padding per rendere la card più grande */
+//     border-radius: 22px;
+//     transition: transform 0.3s ease; /* Aggiungi la transizione per il zoom */
+  
+//     /* Effetto di zoom on hover */
+//     &:hover {
+//       transform: scale(1.05); /* Scala la card del 5% quando è in hover */
+//     }
+//     .cardTransaction-header {
+//       padding: 5px;
+//       border-bottom: 0px;
+//       // background-color: orangered;
+//       border-radius: 22px 22px 0px 0px;
+//       border: 1px solid black;
+//       // height: 100%;
+  
+//       &.expense {
+//         background-color: red;
+//       }
+  
+//       &.income {
+//         background-color: green;
+//       }
+  
+//       .cardTransaction-type {
+//         color: white;
+//         font-size: large;
+//         font-weight: bold;
+//       }
+//     }
+  
+//     .cardTransaction-body {
+//       padding: 5px;
+//       background-color: white;
+//       border: 1px solid black;
+  
+//       .cardTransaction-title {
+//         font-size: 20px;
+//         font-weight: bold;
+//       }
+  
+//       .cardTransaction-icon {
+//         font-size: 30px;
+//       }
+
+//       .cardTransaction-date {
+//         font-size: 20px;
+//       }
+
+//       .cardTransaction-amount {
+//         font-size: 20px;
+//       }
+//     }
+//   }
+  

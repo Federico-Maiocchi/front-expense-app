@@ -1,0 +1,37 @@
+// styles/breadcrumb.scss
+@import "../variables/variables";
+
+// styles/breadcrumb.scss
+.breadcrumb {
+  list-style: none; /* Rimuovi i punti di elenco */
+  padding: 2px 0px; /* Rimuovi il padding */
+  margin: 0; /* Rimuovi il margine */
+  display: flex; /* Utilizza il flexbox per allineare gli elementi su una sola riga */
+  align-items: center; /* Allinea gli elementi verticalmente al centro */
+
+  li {
+    margin: 0 5px; /* Aggiungi margini laterali per separare le voci */
+
+    a {
+      text-decoration: none; /* Rimuovi la sottolineatura dai link */
+      color: $primary-color; /* Colore del testo (assicurati di definire la variabile) */
+      font-size: 20px;
+      font-weight: bold; /* Aggiungi un po' di spessore al font */
+
+      &:hover {
+        text-decoration: underline; /* Aggiungi una sottolineatura al passaggio del mouse */
+      }
+    }
+
+    span {
+      color: $secondary-color; /* Colore del separatore (assicurati di definire la variabile) */
+    }
+  }
+}
+
+// Stile per il link attivo
+.breadcrumb .active {
+  color: $secondary-color; /* Scegli un colore per il link attivo */
+  font-weight: bold; /* Rendi il testo più audace se lo desideri */
+  text-decoration: underline; /* Aggiungi una sottolineatura o qualsiasi altro stile per evidenziare */
+}

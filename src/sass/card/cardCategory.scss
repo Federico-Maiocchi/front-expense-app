@@ -1,0 +1,251 @@
+.cardCategory {
+  display: flex; // Utilizza flexbox
+  flex-direction: column; // Disposizione verticale
+  justify-content: space-between; // Spazio uniforme tra gli elementi
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .cardCategory-header {
+    padding: 10px;
+    border-radius: 22px 22px 0 0;
+    border: 1px solid transparent;
+    text-align: center;
+
+    &.expense {
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    &.income {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .cardCategory-type {
+      font-size: large;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .cardCategory-body {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 0 22px 22px;
+    flex-grow: 1; // Permette al body di occupare lo spazio disponibile
+
+    .cardCategory-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .cardCategory-icon {
+      font-style: normal;
+      font-size: 30px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .cardCategory-action {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #0056b3;
+        }
+      }
+
+      .text-red-600 {
+        color: #d9534f;
+        cursor: pointer;
+
+        &:hover {
+          color: #c9302c;
+        }
+      }
+    }
+  }
+}
+
+// Media query per dispositivi mobili
+@media (max-width: 768px) {
+  .cardCategory {
+    padding: 12px;
+
+    .cardCategory-header {
+      padding: 8px;
+    }
+
+    .cardCategory-body {
+      padding: 8px;
+      .cardCategory-title {
+        font-size: 20px;
+      }
+    }
+
+    .cardCategory-icon {
+      font-size: 24px;
+    }
+  }
+}
+
+
+
+// .cardCategory {
+//   // Utilizza un'ombra per dare profondità alla card
+//   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+//   padding: 16px;
+//   border-radius: 22px;
+//   transition: transform 0.3s ease, box-shadow 0.3s ease; // Aggiunta della transizione per l'ombra
+
+//   // Effetto di zoom on hover
+//   &:hover {
+//     transform: scale(1.05); // Scala la card del 5% quando è in hover
+//     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); // Ombra più intensa quando è in hover
+//   }
+
+//   .cardCategory-header {
+//     padding: 10px; // Aggiungi padding per rendere il header più spazioso
+//     border-radius: 22px 22px 0px 0px;
+//     border: 1px solid transparent; // Cambiato in trasparente per evitare linee evidenti
+//     text-align: center; // Centra il testo
+
+//     // Colori per le diverse tipologie
+//     &.expense {
+//       background-color: #ff4d4d; // Rosso più tenue
+//       color: white;
+//     }
+
+//     &.income {
+//       background-color: #4caf50; // Verde più tenue
+//       color: white;
+//     }
+
+//     .cardCategory-type {
+//       font-size: large;
+//       font-weight: bold;
+//       text-transform: uppercase; // Testo in maiuscolo per un aspetto più audace
+//     }
+//   }
+
+//   .cardCategory-body {
+//     padding: 10px;
+//     background-color: white; // Mantiene il bianco per contrastare
+//     border: 1px solid #e0e0e0; // Un bordo grigio chiaro per un aspetto più pulito
+//     border-radius: 0 0 22px 22px; // Raggio inferiore della border-radius per uniformità
+
+//     .cardCategory-title {
+//       font-size: 22px; // Dimensione del font più piccola
+//       font-weight: bold;
+//       margin-bottom: 5px; // Spazio inferiore
+//       color: #333; // Colore del testo più scuro per contrasto
+//     }
+
+//     .cardCategory-icon {
+//       font-size: 30px;
+//       margin-right: 8px; // Margine destro per separare l'icona dal titolo
+//       vertical-align: middle; // Allinea l'icona con il testo
+//     }
+
+//     .cardCategory-action {
+//       margin-top: 10px; // Spazio sopra le azioni
+//       display: flex;
+//       justify-content: space-between; // Spazio tra i link
+//       font-size: 14px; // Dimensione del font più piccola
+
+//       a {
+//         color: #007bff; // Colore link blu
+//         text-decoration: none; // Rimuovi la sottolineatura
+//         transition: color 0.3s; // Transizione per il colore
+
+//         &:hover {
+//           color: #0056b3; // Colore blu scuro al passaggio del mouse
+//         }
+//       }
+
+//       .text-red-600 {
+//         color: #d9534f; // Colore rosso per il testo di eliminazione
+//         cursor: pointer; // Cambia il cursore per indicare che è cliccabile
+//         transition: color 0.3s;
+
+//         &:hover {
+//           color: #c9302c; // Colore rosso scuro al passaggio del mouse
+//         }
+//       }
+//     }
+//   }
+
+  
+// }
+
+
+
+
+// .cardCategory {
+//   // height: 100%;
+//   // border: 1px solid;
+//   // border-radius: 22px;
+
+//   padding: 16px; /* Aggiungi padding per rendere la card più grande */
+//   border-radius: 22px;
+//   transition: transform 0.3s ease; /* Aggiungi la transizione per il zoom */
+
+//   /* Effetto di zoom on hover */
+//   &:hover {
+//     transform: scale(1.05); /* Scala la card del 5% quando è in hover */
+//   }
+//   .cardCategory-header {
+//     padding: 5px;
+//     border-bottom: 0px;
+//     // background-color: orangered;
+//     border-radius: 22px 22px 0px 0px;
+//     border: 1px solid black;
+//     // height: 100%;
+
+//     &.expense {
+//       background-color: red;
+//     }
+
+//     &.income {
+//       background-color: green;
+//     }
+
+//     .cardCategory-type {
+//       color: white;
+//       font-size: large;
+//       font-weight: bold;
+//     }
+//   }
+
+//   .cardCategory-body {
+//     padding: 5px;
+//     background-color: white;
+//     border: 1px solid black;
+
+//     .cardCategory-title {
+//       font-size: 25px;
+//       font-weight: bold;
+//     }
+
+//     .cardCategory-icon {
+//       font-size: 30px;
+//     }
+//   }
+// }

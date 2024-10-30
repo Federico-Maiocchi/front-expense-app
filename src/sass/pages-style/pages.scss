@@ -1,0 +1,49 @@
+.page-head {
+    margin-bottom: 10px;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+button {
+  padding: 10px 20px; /* Spazio interno per rendere il pulsante confortevole */
+  font-size: 16px; /* Dimensione del testo */
+  font-weight: bold; /* Testo in grassetto */
+  color: white; /* Colore del testo */
+  background-color: #007bff; /* Colore di sfondo */
+  border: none; /* Rimuove il bordo */
+  border-radius: 5px; /* Bordi arrotondati */
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animazione di transizione */
+
+  
+}
+
+/* Pulsante di cancellazione */
+.button-delete {
+    background-color: #dc3545; /* Rosso per cancellazione */
+  }
+
+  .button-delete:hover {
+    background-color: #c82333; /* Scuro durante hover */
+  }
+
+  .button-delete:active {
+    background-color: #bd2130; /* Ancora più scuro durante il click */
+  }
+
+  /* Pulsante di creazione */
+  .button-create {
+    background-color: #28a745; /* Verde per creazione */
+  }
+
+  .button-create:hover {
+    background-color: #218838; /* Scuro durante hover */
+  }
+
+  .button-create:active {
+    background-color: #1e7e34; /* Ancora più scuro durante il click */
+  }

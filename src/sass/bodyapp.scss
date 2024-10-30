@@ -1,0 +1,74 @@
+@import "../sass/variables/variables";
+
+.body-app {
+  background-color: $body-app-color; // Colore di sfondo
+  padding: 0 5px; // Padding laterale
+  flex-grow: 1; // Occupa lo spazio disponibile
+  display: flex;
+  flex-direction: column; // Disposizione verticale
+  height: 100vh; // Altezza della viewport
+  overflow: hidden; // Evita lo scroll esterno
+
+  .center-app {
+    border: 1px solid black; // Bordo per il contenuto centrale
+    height: 100%; // Prende tutta l'altezza disponibile
+    overflow-y: auto; // Attiva lo scroll verticale se necessario
+    padding: 15px; // Padding interno
+    flex-grow: 1; // Occupa tutto lo spazio disponibile
+
+    h1 {
+      margin-bottom: 0px; // Margine inferiore per il titolo
+    }
+
+    p {
+      margin: 0; // Rimuovi margini per i paragrafi
+    }
+  }
+}
+
+// Media query per schermi più piccoli
+@media (max-width: 768px) {
+  .body-app {
+    padding: 0; // Rimuovi il padding sui dispositivi più piccoli
+
+    .center-app {
+      padding: 10px; // Riduci il padding
+    }
+  }
+}
+
+
+// @import "../sass/variables/variables";
+
+// .body-app {
+//   background-color: $body-app-color;
+//   padding: 0px 5px 0px 5px;
+//   flex-grow: 1;
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh; // Assicura che .body-app prenda tutta l'altezza della viewport
+//   overflow: hidden; // Evita che lo scroll si applichi all'esterno
+
+//   .center-app {
+//     border: 1px solid black;
+//     height: 100%;
+//     overflow-y: auto; // Attiva lo scroll verticale
+//     padding: 15px;
+//     flex-grow: 1; // Occupa tutto lo spazio disponibile dentro .body-app
+//   }
+// }
+
+
+// .body-app {
+//   background-color: $body-app-color;
+//   padding: 20px;
+//   flex-grow: 1;
+
+//   .center-app {
+//     border: 1px solid black;
+//     height: 100%;
+
+//     // Aggiungi la proprietà overflow-y per lo scorrimento
+//     overflow-y: auto;
+//   }
+// }

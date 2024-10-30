@@ -1,0 +1,92 @@
+@import "../sass/variables/variables";
+
+nav {
+  color: white;
+  background-color: $background-template;
+  border-bottom: 2px solid black;
+  padding: 0 10px; // Uniformare il padding
+  height: 60px;
+  font-size: 18px;
+  font-weight: 800;
+
+  display: flex; // Utilizzo di flexbox
+  align-items: center; // Allineamento verticale degli elementi
+  justify-content: space-between; // Spaziatura tra gli elementi
+
+  ul {
+    height: 100%;
+    display: flex; // Utilizzo di flexbox per l'elenco
+    gap: 10px; // Spazio tra gli elementi dell'elenco
+    list-style: none; // Rimuovere i punti dell'elenco
+
+    li {
+      padding: 5px 15px; // Aumenta il padding per una migliore usabilità
+      background-color: $background-primary-color;
+      border-radius: 20%;
+      transition: background-color 0.3s ease, color 0.3s ease; // Aggiunta di una transizione
+
+      // Aggiunta di un'ombreggiatura leggera
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background-color: $secondary-color;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Media query per schermi più piccoli
+@media (max-width: 768px) {
+  nav {
+    height: 50px; // Ridurre l'altezza della navbar
+
+    font-size: 16px; // Dimensione del font più piccola
+
+    ul {
+      flex-direction: column; // Cambiare l'orientamento dell'elenco in verticale
+      gap: 5px; // Ridurre lo spazio tra gli elementi dell'elenco
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    font-size: 14px; // Ulteriore riduzione della dimensione del font
+    padding: 0 5px; // Ridurre il padding per schermi molto piccoli
+
+    ul {
+      li {
+        padding: 5px 10px; // Ridurre il padding degli elementi dell'elenco
+      }
+    }
+  }
+}
+
+
+// @import "../sass/variables/variables";
+
+// nav {
+//   color: white;
+//   background-color: $background-template;
+//   border-bottom: 2px solid black;
+//   padding: 0px 10px 0px 10px;
+//   height: 60px;
+//   font-size: 18px;
+//   font-weight: 800;
+
+//   ul {
+//     height: 100%;
+
+//     li {
+//       padding: 5px 10px 5px 10px;
+//       background-color: $background-primary-color;
+//       border-radius: 20%;
+//     }
+
+//     li:hover {
+//       background-color: $secondary-color;
+//       color: $primary-color;
+//     }
+//   }
+// }

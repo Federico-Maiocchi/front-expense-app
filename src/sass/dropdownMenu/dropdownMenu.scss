@@ -1,0 +1,33 @@
+.dropdown-menu {
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 100;
+  display: block;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 8px 12px;
+      transition: background-color 0.3s ease;
+
+      a {
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+          color: #0056b3;
+        }
+      }
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
